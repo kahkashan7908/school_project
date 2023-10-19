@@ -8,9 +8,11 @@ Clone the repo on your local machine through this command: git clone https://git
 # Step 3 :  
 **python manage.py makemigrations**
 # Step 4 : 
-python manage.py migrate
+**python manage.py migrate**
 # Step 5 : 
 **python manage.py createsuperuser**
+# step 6 :
+## Login to admin interface and add data to teacher and student table
 # Step 6 :
 **python manage.py runserver**
 
