@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Certificate</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/certificate.css' %}">
+</head>
+<body>
+    <div class="certificate">
+        <h1>Certificate</h1>
+        <h3>of Completion</h3>
+        <p>THIS IS TO CERTIFY THAT</p>
+        <div class="student">
+            <p style="margin-bottom: -5px;">{{ certificate.student.name }}</p>
+        </div>
+        <div style="width: 150px; margin: 0 auto;">
+            <hr style="height: 1px; background-color: #7a7979;">
+        </div>
+        <p style="margin-bottom: -4px;">Has successfully complete the</p>
+        <div class="course">
+            <p>{{ certificate.student.course }}</p>
+        </div>
+        <div class="footer">
+            <div style="display: inline-block; width: 50%; margin-right: 300px;">
+                <p style="margin-bottom: -5px;">{{ certificate.teacher.name }}</p>
+                <div style="display: inline-block; width: 150px; margin: 0 auto;">
+                    <hr style="height: 1px; background-color: #7a7979;">
+                </div>
+                <p style="margin-top: -5px;">Instructor</p>
+            </div>
+
+            <div style="display: inline-block; width: 50%; margin-left: 300px; margin-top: -60px;">
+                <p style="margin-bottom: -5px;">{{ certificate.issue_date }}</p>
+                <div style="display: inline-block; width: 150px; margin: 0 auto;">
+                    <hr style="height: 1px; background-color: #7a7979;">
+                </div>
+                <p style="margin-top: -5px;">issue date</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

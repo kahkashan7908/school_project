@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Details</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/student.css' %}">
+</head>
+<body>
+    <form method="post">
+        {% csrf_token %}
+        
+        <label for="student">Select a Student:</label>
+        <select name="student" id="student">
+            {% for student in students %}
+                <option value="{{ student.id }}">{{ student.name }}</option>
+            {% endfor %}
+        </select>
+        <br>
+        <input type="submit" value="Get Teacher">
+    </form>   
+    
+    <h2>Teachers:</h2>
+    <ul>
+        {% for teacher in teachers %}
+            <li>{{ teacher.name }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
